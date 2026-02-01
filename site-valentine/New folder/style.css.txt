@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: white;
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 20px;
+    width: 85%;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 20px rgba(255,0,100,0.5);
+}
+
+h1 {
+    font-size: 32px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#yes {
+    background: #ff4d6d;
+    color: white;
+}
+
+#no {
+    background: #444;
+    color: white;
+    position: absolute;
+}
+
+.music-btn {
+    margin-top: 20px;
+    background: #00c2ff;
+    color: white;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+#loveMsg {
+    margin-top: 15px;
+    font-size: 22px;
+    color: pink;
+}

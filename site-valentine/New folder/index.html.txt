@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine 💖</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>DO U WANNA BE MY VALENTINE? 💘</h1>
+
+    <div class="buttons">
+        <button id="yes">YES 💖</button>
+        <button id="no">NO 😈</button>
+    </div>
+
+    <p class="slider-text">HOW MUCH U WANNA HANG UP?</p>
+    <input type="range" min="0" max="10000000" value="0" id="slider">
+    <p id="value">0</p>
+
+    <button class="music-btn" onclick="toggleMusic()">🎵 Play / Pause</button>
+
+    <p id="loveMsg"></p>
+</div>
+
+<audio id="music" loop>
+    <source src="muzica/melodie.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

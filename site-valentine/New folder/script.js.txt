@@ -1,0 +1,55 @@
+// FUNDAL
+const backgrounds = [
+    "imagini/bg1.jpg",
+    "imagini/bg2.jpg",
+    "imagini/bg3.jpg"
+];
+
+let bg = 0;
+
+function changeBackground() {
+    document.body.style.backgroundImage =
+        url(${backgrounds[bg]});
+    bg = (bg + 1) % backgrounds.length;
+}
+
+setInterval(changeBackground, 5000);
+changeBackground();
+
+// MUZICĂ
+const music = document.getElementById("music");
+let playing = false;
+
+function toggleMusic() {
+    if (!playing) {
+        music.play();
+        playing = true;
+    } else {
+        music.pause();
+        playing = false;
+    }
+}
+
+// BUTON NO
+const noBtn = document.getElementById("no");
+
+noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * (window.innerWidth - 120);
+    const y = Math.random() * (window.innerHeight - 120);
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+});
+
+// SLIDER
+const slider = document.getElementById("slider");
+const value = document.getElementById("value");
+
+slider.oninput = () => {
+    value.textContent = slider.value;
+};
+
+// YES
+document.getElementById("yes").onclick = () => {
+    document.getElementById("loveMsg").innerHTML =
+        "💖 YAAAAY! I KNEW IT 😍💖";
+};
